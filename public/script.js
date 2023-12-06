@@ -33,7 +33,7 @@ let div5 = document.getElementById("child-content-5");
 // aaaaaaaaaaa
 // Crear una tarea
 let new_task = (task_name, task_deadline, task_priority) => {
-    fetch('https://task-sense.koyeb.app:8000/task', {
+    fetch('https://task-sense.koyeb.app/tasks', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ let new_task = (task_name, task_deadline, task_priority) => {
 
 // Terminar una tarea
 let finish_task = (taskId) => {
-    fetch(`https://task-sense.koyeb.app:8000/tasks/${taskId}`, {
+    fetch(`https://task-sense.koyeb.app/tasks/${taskId}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ let finish_task = (taskId) => {
 
 // Mostrar tareas por prioridad y no completadas
 let show_priority_tasks = (priority, div_id) => {
-    fetch(`https://task-sense.koyeb.app:8000/tasks/priority/${priority}`)
+    fetch(`https://task-sense.koyeb.app/tasks/priority/${priority}`)
     .then(response => response.json())
     .then(data => {
         // Filtra las tareas que no están completadas
