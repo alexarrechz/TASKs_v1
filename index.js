@@ -89,7 +89,7 @@ app.patch("/tasks/:id", gettask, async (req, res) => {
 });
 
 // LISTENER SERVER IS ON
-res = app.listen("3000", () => {
+res = app.listen(process.env.PORT, () => {
   console.log("Server On");
 });
 
