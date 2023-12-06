@@ -30,10 +30,10 @@ let div3 = document.getElementById("child-content-3");
 let div4 = document.getElementById("child-content-4");
 let div5 = document.getElementById("child-content-5");
 
-// nose
+
 // Crear una tarea
 let new_task = (task_name, task_deadline, task_priority) => {
-    fetch(process.env.PORT, {
+    fetch('http://localhost:3000/task', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ let new_task = (task_name, task_deadline, task_priority) => {
 
 // Terminar una tarea
 let finish_task = (taskId) => {
-    fetch(`http://localhost:8000/tasks/${taskId}`, {
+    fetch(`http://localhost:3000/tasks/${taskId}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ let finish_task = (taskId) => {
 
 // Mostrar tareas por prioridad y no completadas
 let show_priority_tasks = (priority, div_id) => {
-    fetch(`http://localhost:8000/tasks/priority/${priority}`)
+    fetch(`http://localhost:3000/tasks/priority/${priority}`)
     .then(response => response.json())
     .then(data => {
         // Filtra las tareas que no están completadas
