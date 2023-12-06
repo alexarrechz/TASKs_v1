@@ -1,0 +1,354 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@400;500;700&display=swap");
+html,
+body {
+  margin: 0;
+  font-family: "Comfortaa", cursive;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.aside {
+  height: 100%;
+  flex: 1;
+  min-width: 80px;
+  background-color: #28E8E9;
+  color: #263D39;
+  z-index: 6;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 3vw;
+}
+.aside h1 {
+  align-self: flex-end;
+  font-size: 250%;
+  transform: rotate(269deg);
+  -webkit-transform: rotate(269deg);
+  -moz-transform: rotate(269deg);
+  padding-top: 1.28vw;
+}
+.aside .integrantes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 0.79vw;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.aside .integrantes p {
+  font-size: 50%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  flex: 10;
+  height: 100%;
+}
+.main .header {
+  background-color: #263D39;
+  height: 14vh;
+  color: #E6FDFF;
+  z-index: 2;
+  padding-left: 3.4vw;
+  padding-right: 10vw;
+  display: flex;
+  align-items: end;
+}
+.main .header .header-inputs {
+  margin-bottom: 0.4vw;
+  display: flex;
+  flex-direction: row;
+  padding: 0.49vw;
+}
+.main .header .header-inputs .header--inputs {
+  flex: 4;
+  margin-right: 3.105vw;
+  color: #E6FDFF;
+  display: flex;
+  flex-wrap: wrap;
+  width: 33.3333333333;
+}
+.main .header .header-inputs .header--inputs .header-button {
+  margin-top: 10%;
+}
+.main .header .header-inputs .header--inputs label {
+  font-size: 150%;
+  padding-top: 5%;
+  padding-bottom: 0.5vw;
+  margin: 0;
+  min-width: 4vw;
+}
+.main .header .header-inputs .header--inputs input {
+  width: 100%;
+}
+.main .header .button {
+  margin-bottom: 0.9vw;
+  position: relative;
+  flex: 2;
+  font-size: 1.5vw;
+  background-color: #0DB16F;
+  width: 10vw;
+  height: 2vh;
+  padding: 0.79vw;
+  border-radius: 0.79vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.3s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.main .header .alert::after {
+  content: "⚠️Rellena los inputs";
+  position: absolute;
+  left: 0;
+  top: -20px;
+  color: #F3727F;
+  font-size: small;
+}
+.main .header .button:hover {
+  background-color: #F3727F;
+}
+.main .content {
+  background-color: #E6FDFF;
+  height: 86vh;
+  overflow: hidden;
+  color: #263D39;
+}
+.main .content .priority-content {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  z-index: 2;
+  position: relative;
+}
+.main .content .priority-content .content-child {
+  background-color: rgba(13, 177, 111, 0.5);
+  width: calc(40%);
+  height: 20vh;
+  position: relative;
+  padding-left: 4.14vw;
+  padding-top: 0.79vw;
+  padding-right: 0px;
+  padding-bottom: 0.79vw;
+  margin-top: 1.28vw;
+  margin-left: 4vw;
+  border-bottom: 4px solid #263D39;
+  display: flex;
+  align-items: center;
+}
+.main .content .priority-content .content-child td {
+  padding-right: 0.6vw;
+  padding-left: 0.5vw;
+  padding-bottom: 1vw;
+  padding-right: #354954;
+  padding-bottom: #354954;
+}
+.main .content .priority-content .child-content {
+  margin-left: 2%;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  justify-content: space-between;
+}
+.main .content .priority-content .child-content div {
+  display: flex;
+  height: 1.5vw;
+  width: 1.5vw;
+  background-color: #263D39;
+  border-radius: 15%;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s background-color;
+}
+.main .content .priority-content .child-content p,
+.main .content .priority-content .child-content table {
+  width: 95%;
+}
+.main .content .priority-content .child-content p td:nth-child(3),
+.main .content .priority-content .child-content table td:nth-child(3) {
+  width: 1.5vw;
+  padding: 0;
+}
+.main .content .priority-content .child-content div:hover {
+  background-color: #F3727F;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .content .priority-content .child-content div:hover::after {
+  content: "x";
+  font-size: medium;
+  color: #E6FDFF;
+}
+.main .content .priority-content .child-content-1::after {
+  content: "1";
+  z-index: -1;
+  font-size: 20vh;
+  position: absolute;
+  top: 0vw;
+  left: -50px;
+  font-family: "Comfortaa", cursive;
+  font-weight: normal;
+}
+.main .content .priority-content .child-content-2::after {
+  content: "2";
+  z-index: -1;
+  font-size: 20vh;
+  position: absolute;
+  top: 0vw;
+  left: -50px;
+  font-family: "Comfortaa", cursive;
+  font-weight: normal;
+}
+.main .content .priority-content .child-content-3::after {
+  content: "3";
+  z-index: -1;
+  font-size: 20vh;
+  position: absolute;
+  top: 0vw;
+  left: -50px;
+  font-family: "Comfortaa", cursive;
+  font-weight: normal;
+}
+.main .content .priority-content .child-content-4::after {
+  content: "4";
+  z-index: -1;
+  font-size: 20vh;
+  position: absolute;
+  top: 0vw;
+  left: -50px;
+  font-family: "Comfortaa", cursive;
+  font-weight: normal;
+}
+.main .content .priority-content .child-content-5::after {
+  content: "5";
+  z-index: -1;
+  font-size: 20vh;
+  position: absolute;
+  top: 0vw;
+  left: -50px;
+  font-family: "Comfortaa", cursive;
+  font-weight: normal;
+}
+.main .content .priority-content .child-content-1::before {
+  content: "Ahorita";
+  font-size: 3vh;
+  position: absolute;
+  left: 0;
+  top: 43%;
+  transform: translateY(-50%);
+  font-family: "Comfortaa", cursive;
+  font-weight: normal;
+  border-bottom: 2px solid #E6FDFF;
+  transform: rotate(269deg);
+  -webkit-transform: rotate(269deg);
+  -moz-transform: rotate(269deg);
+}
+.main .content .priority-content .child-content-2::before {
+  content: "Pronto";
+  font-size: 3vh;
+  position: absolute;
+  left: 0;
+  top: 43%;
+  transform: translateY(-50%);
+  font-family: "Comfortaa", cursive;
+  font-weight: normal;
+  border-bottom: 2px solid #E6FDFF;
+  transform: rotate(269deg);
+  -webkit-transform: rotate(269deg);
+  -moz-transform: rotate(269deg);
+}
+.main .content .priority-content .child-content-3::before {
+  content: "Luego";
+  font-size: 3vh;
+  position: absolute;
+  left: 0;
+  top: 43%;
+  transform: translateY(-50%);
+  font-family: "Comfortaa", cursive;
+  font-weight: normal;
+  border-bottom: 2px solid #E6FDFF;
+  transform: rotate(269deg);
+  -webkit-transform: rotate(269deg);
+  -moz-transform: rotate(269deg);
+}
+.main .content .priority-content .child-content-4::before {
+  content: "Después";
+  font-size: 3vh;
+  position: absolute;
+  left: 0;
+  top: 43%;
+  transform: translateY(-50%);
+  font-family: "Comfortaa", cursive;
+  font-weight: normal;
+  border-bottom: 2px solid #E6FDFF;
+  transform: rotate(269deg);
+  -webkit-transform: rotate(269deg);
+  -moz-transform: rotate(269deg);
+  left: -0.2vw;
+}
+.main .content .priority-content .child-content-5::before {
+  content: "Relax";
+  font-size: 3vh;
+  position: absolute;
+  left: 0;
+  top: 43%;
+  transform: translateY(-50%);
+  font-family: "Comfortaa", cursive;
+  font-weight: normal;
+  border-bottom: 2px solid #E6FDFF;
+  transform: rotate(269deg);
+  -webkit-transform: rotate(269deg);
+  -moz-transform: rotate(269deg);
+  left: 1vw;
+}
+.main .content .all-content {
+  display: none;
+  height: 100%;
+  padding: 0 2.07vw 0 0;
+  margin-bottom: 2.07vw;
+}
+.main .content .all-content .content-child {
+  margin-bottom: 2.07vw;
+  background-color: rgba(13, 177, 111, 0.5);
+  position: relative;
+  padding: 0.79vw 4.14vw;
+  margin-top: 1.28vw;
+  margin-left: 4vw;
+  border-bottom: 4px solid #263D39;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+.main .content .all-content .child-content::after {
+  content: "Todas las tareas";
+  font-size: 3vh;
+  position: absolute;
+  left: -7vw;
+  top: 14%;
+  transform: translateY(-50%);
+  font-family: "Comfortaa", cursive;
+  font-weight: normal;
+  border-bottom: 2px solid #354954;
+  transform: rotate(269deg);
+  -webkit-transform: rotate(269deg);
+  -moz-transform: rotate(269deg);
+}
