@@ -33,7 +33,7 @@ let div5 = document.getElementById("child-content-5");
 // aaaaaaaaaaa
 // Crear una tarea
 let new_task = (task_name, task_deadline, task_priority) => {
-    fetch('https://task-sense.koyeb.app/tasks', {
+    fetch('https://task-sense.koyeb.app/task', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
